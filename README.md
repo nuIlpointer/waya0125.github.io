@@ -1,4 +1,5 @@
 ＃WebHTML-Souce
+ <meta http-equiv="content-type" charset="utf-8">
 Xドメインで公開していたVer0.01ベータを移植してみました。積極的に開発されますが美しい見た目になるのは相当先です。<br>
 nuilpointerくんに触発されて開発を再開させましたとさ。どうなるんだか<br>
 <br>
