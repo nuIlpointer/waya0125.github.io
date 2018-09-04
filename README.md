@@ -5,3 +5,4 @@ nuilpointerくんに触発されて開発を再開させましたとさ。どう
 [更新履歴]<br>
 Version 0.01 beta ... xdomainにて公開。更新の面倒さで断念<br>
 Version 0.02 beta ... GitHubにて公開できることを知り移植。Shift-JISでUTF-8に対応させたりといろいろ大変だったが無事コピー<br>
+Version 0.1.0 alpha ... 大型アップデート。内容としては背景の単色化、URL追加、写真の差し替え、その他バックにていろいろな機能を準備中
