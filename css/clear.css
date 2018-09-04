@@ -1,0 +1,17 @@
+div.hidari1 {
+	width:100px;
+	float:left;
+	background-color:#CC99CC;
+}
+
+div.migi1 {
+	width:200px;
+	float:left;
+	background-color:#CC9999;
+}
+
+div.shita1 {
+	clear:both;
+	width:300px;
+	background-color:#CCCC99;
+}
