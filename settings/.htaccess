@@ -1,0 +1,5 @@
+# ファイルとディレクトリを保護
+SetEnvIf Request_URI "(\.(txt|dat|csv|ini)|/(data|lib|templates)/)$" ng_dir
+Order Allow,Deny
+Allow from all
+Deny from env=ng_dir

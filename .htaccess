@@ -1,0 +1,19 @@
+DirectoryIndex  index.html  index.php  /_h5ai/public/index.php
+DirectoryIndex index.html index.cgi index.php .ht
+Options -Indexes
+
+# ルートパスで記述
+ErrorDocument 200 /settings/error/200.html
+ErrorDocument 301 /settings/error/301.html
+ErrorDocument 302 /settings/error/302.html
+ErrorDocument 303 /settings/error/303.html
+ErrorDocument 307 /settings/error/307.html
+ErrorDocument 400 /settings/error/400.html
+ErrorDocument 401 /settings/error/401.html
+ErrorDocument 403 /settings/error/403.html
+ErrorDocument 404 /settings/error/404.html
+ErrorDocument 408 /settings/error/408.html
+ErrorDocument 410 /settings/error/410.html
+ErrorDocument 413 /settings/error/413.html
+ErrorDocument 500 /settings/error/500.html
+ErrorDocument 503 /settings/error/503.html

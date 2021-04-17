@@ -1,0 +1,339 @@
+/*CSS 設定用エリア*/
+@charset "UTF-8";
+
+/*--Googleのフォント関連設定--*/
+@import url(//fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+html{
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 100%;
+        position: absolute;
+        top: 100px;
+        left: 150px;
+        margin-right: 50px;
+        transform: translate(-50px, -50px);
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif; /*フォントをGoogleのNoto Sans JPに指定するコード。前提条件に呼び出しコードが必要。*/
+    color: #000000;
+    -ms-user-select: none; /* none:選択させない / all:すべてを強制的に選択させる(部分的ではない) / text:ユーザーが直接選択したものを選択できるようにする */
+    -webkit-user-select: none;
+    user-select: none;
+    line-break: normal; /* auto:禁則処理を行わない / loose:最低限の禁則処理 / normal:一般的な禁則処理ルールを適用 / strict:細かな禁則処理うルールを適用 */
+    word-wrap: normal;
+}
+
+/* Google Noto Sans JPの文字サイズではなく太さを指定するコード。
+呼び出し形式はclassなので class="weught100" などで呼び出し可能。
+なお追記方法は <h1 class>など。詳しい例題は https://waya0125.com/blogs/2021/20210115.html
+の内容を確認して下さい */
+.weight100   {
+    font-weight:100
+}
+
+.weight300   {
+    font-weight:300
+}
+
+.weight400   {
+    font-weight:400
+}
+
+.weight500   {
+    font-weight:500
+}
+
+.weight600   {
+    font-weight:600
+}
+
+.weight700   {
+    font-weight:700
+}
+
+.weight900   {
+    font-weight:900
+}
+/*---ここまでGoogleのフォント関連設定*/
+
+/*ここからはHTML本体の設定*/
+/*サイズや位置関連*/
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+a {
+    font-size: 100%;
+}
+
+.add {
+    font-size: 20px;
+    font-style: italic;
+}
+
+.kaigyo {
+    white-space : pre
+}
+
+.unselectable {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.all {
+    -moz-user-select: all;
+    -webkit-user-select: all;
+    -ms-user-select: all;
+    user-select: all;
+}
+
+.text {
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+.blog1 {
+    line-height: 25px
+}
+
+.blog2 {
+    line-height: 25px
+}
+
+.titlebar {
+    display: table;
+    width: 100%;
+    background-color:#06615B;
+    color:white;
+}
+
+.category {
+    display: table-cell;
+    text-align: left;
+}
+
+.subject  {
+    display: table-cell;
+    text-align: center;
+    font-size: 22px;
+}
+
+.date     {
+    display: table-cell;
+    text-align: right;
+}
+
+.tab_index {
+    display: table-cell;
+    text-align: left;
+}
+
+.scroll_block {
+    height: 150px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;    /* IE, Edge 対応 */
+    scrollbar-width: none;       /* Firefox 対応 */
+}
+.scroll_block::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+    display:none;
+}
+/*ここまでサイズや位置関連*/
+
+/*!!色関連!!*/
+@media (prefers-color-scheme: light) {
+    #uplay {
+        color: #ffffff;
+        text-decoration : none;
+    }
+    a {
+        color: #000000;
+        text-decoration : none;
+    }
+    a:hover {
+        text-decoration : none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #ffffff;
+        background-color: #1f2023;
+    }
+    #uplay {
+        color: #1f2023;
+        text-decoration : none;
+    }
+    a {
+        color: #ffffff;
+        text-decoration : none;
+    }
+    a:hover {
+        text-decoration : none;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    img {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 979px) {
+     
+    Html{
+        Width:100%;
+    }
+ 
+} /*デバイスの横幅が979px以下の場合*/
+ 
+@media only screen and (min-width: 321px) and (max-width: 768px) {
+     
+    Html{
+        Width:100%;
+    }
+ 
+} /*デバイスの横幅が321以上768以下の場合*/
+ 
+@media only screen and (max-width: 320px) {
+     
+    header{
+        Width:90%;
+    }
+ 
+} /* デバイスの横幅が320px以下の場合 */
+
+/*旧式サイトからのコード移植*/
+
+/*============================================
+メインメニュー
+============================================*/
+ul#menu {
+    height:42px;
+    background-color:#eeeeee;
+    font-weight:bold;
+}
+
+ul#menu a {
+	display:block;				/*リンクをブロック表示にする*/
+    height:42px;
+    padding-top:4px;
+    text-align:center;
+	text-decoration:none; 			/*リンクの下線を無くす*/
+	font-family:Arial, Helvetica, sans-serif;	/*フォントの種類*/
+}
+
+#menu ul{ 
+    margin: 0; 
+    padding: 0; 
+    list-style: none; 
+    }
+    #menu li{ 
+    display: inline; 
+    padding: 0; 
+    margin: 0; 
+    }
+    #menu li a{
+    display: block; 
+    border-left: 8px solid #C97556;
+    background-color: #474655;
+    padding: 3px 10px;
+    text-decoration: none;
+    color: #E1E2CF;
+    width: 150px; 
+    margin: 1px 0px;
+    text-align: center;
+    font-size: 14px;
+    }
+    #menu li a:hover{
+    border-left: 8px solid #990033;
+    background-color: #474655;
+    }
+
+/*============================================
+サブメニュー（左カラム）
+============================================*/
+div#submenu {
+	width:250px;			/*幅の指定*/
+	display:inline;			/*IE6のマージン算出のバグ対策*/
+	float:center;			/*サブメニューのカラムを左寄せにする*/
+}
+
+/*サブメニューのヘッダ部分（余白調整・背景画像・背景色・文字サイズなど）*/
+div#submenu_header {
+    height:26px;
+    padding:0px 0px 0px 0px;
+	background-color:#646464;
+    font-size:90%;
+    font-weight:bold;
+    text-align:center;
+}
+
+/*サブメニューのボディ部分（余白調整・背景画像・背景色）*/
+ul#submenu_body {
+	padding-bottom:8px;
+    background-color:#2b2b2b;
+    padding:0px 0px 5px 0px;
+}
+ul#submenu_body li {
+	font-size:90%;			/*文字サイズを90%にする*/
+    list-style-type:none;		/*リストマーカー無しにする*/
+	display:inline;			/*リスト項目をインライン表示にする*/
+    text-align:left;
+}
+ul#submenu_body li a {
+	display:block;			/*リンクをブロック表示にする*/
+	margin:0px 400px 0px 400px;		/*サブメニュー項目のマージン*/
+	padding:2px 0px 2px 200px;	/*サブメニュー項目のパディング*/
+	background-color:#2b2b2b;	/*サブメニュー項目の背景色*/
+	text-decoration:none;		/*リンクの下線を無くす*/
+}
+ul#submenu_body li a:hover {
+    background-color:#ffc5c5;	/*リンクにマウスが乗ったら色を変える*/
+}
+
+/*============================================
+コンテンツ（中央と右の2カラム全体）
+============================================*/
+div#content {
+	margin:10px 20px 10px 0px;	/*幅の指定と位置調整*/
+}
+
+/*============================================
+ニュース（中央カラム）
+============================================*/
+div#main {
+    display: table-cell;
+    width:390px;
+    margin-right:105px;
+    padding-top:10px; /*幅の指定と位置調整*/
+	float:center;					                     /*カラムを左寄せにする*/
+}
+
+/*============================================
+フッタ
+============================================*/
+div#footer {
+	height:42px; text-align:center;
+	clear:both;					/*回り込みを解除する*/
+	background-image:url("images/bg_footer.jpg");	/*フッタ部分の背景画像*/
+	background-repeat:no-repeat;			/*背景画像を繰り返さない*/
+	background-color:#cccccc;			/*フッタ部分の背景色*/
+}
+address {
+	font-style:normal;			 /*フォントスタイルを標準にする*/
+	font-size:small;			 /*フォントサイズを小さくする*/
+	padding:5px 0px 5px 0px;		 /*要素内容の位置調整*/
+}
