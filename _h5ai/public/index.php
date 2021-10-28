@@ -5,7 +5,7 @@ header("X-Robots-Tag: noindex, nofollow");
 /*<?
 Header("HTTP/1.1 301 Moved Permanently");
 header("X-Robots-Tag: noindex, nofollow");
-Header("Location: https://waya0125.com/");
+Header("Location: https://waya0125.github.io/");
 ?>*/
 
 define('H5AI_VERSION', '0.30.0');
