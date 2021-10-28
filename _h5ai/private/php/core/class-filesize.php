@@ -24,7 +24,7 @@ class Filesize {
 
     private function read_dir($path) {
         $paths = [];
-        if (is_dir($path)) {
+	if (is_dir($path)) {
             foreach (scandir($path) as $name) {
                 if ($name !== '.' && $name !== '..') {
                     $paths[] = $path . '/' . $name;
