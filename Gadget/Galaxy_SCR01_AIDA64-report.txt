@@ -184,7 +184,7 @@ Unified Memory: Yes
 << Vulkan Device - Mali-G57 MC3 >>
 Device Name: Mali-G57 MC3
 Device Type: Integrated GPU
-Device UUID: D1-FE-81-35-2A-68-FE-F6-D7-35-93-D2-6F-F4-52-FE
+Device UUID: 
 Device ID: 000013B5-90930000
 Memory Size: 2414724 KB
 Max 1D Image Size: 16384
@@ -356,10 +356,6 @@ Battery: 19.5°C
 No sensors found.
 
 <<< Apps >>>
-
-AIDA64: com.finalwire.aida64(v1.85)
-Aurora Store: com.aurora.store(v4.0.7)
-デバイスケア: com.samsung.android.lool(v12.3.02.2)
 
 <<< Codecs >>>
 
