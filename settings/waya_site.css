@@ -34,7 +34,7 @@
 body {
     font-family: 'Noto Sans JP', sans-serif;/*フォントをGoogleのNoto Sans JPに指定するコード。前提条件に呼び出しコードが必要。*/
     min-height: 100vh;
-    width: 100vw;
+    width: 100%;
     position: absolute;
     text-align: center;
     color: #000000;
@@ -230,7 +230,7 @@ header .headline {
 }
 
 body:not(.rtm-license-body) footer {
-    width: 100vw;
+    width: 100%;
     height: 48px;
     margin: 0;
     padding: 0;
@@ -326,7 +326,7 @@ profile.htmlで使ってる*/
 
 .profile-sections {
     margin: 20px;
-    width: calc(100vw - 20px * 2); /* 例としての幅の定義 */
+    width: calc(100% - 20px * 2); /* 例としての幅の定義 */
 }
 
 .profile-section {
