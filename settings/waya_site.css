@@ -33,7 +33,6 @@
 
 body {
     font-family: 'Noto Sans JP', sans-serif;/*フォントをGoogleのNoto Sans JPに指定するコード。前提条件に呼び出しコードが必要。*/
-    margin: 0px;
     min-height: 100vh;
     width: 100vw;
     position: absolute;
@@ -52,7 +51,7 @@ body {
     min-height: 100vh;
 }
 
-.body_i{
+.body_i {
     font-size: 100%;
     position: absolute;
     top: 50%;
@@ -61,8 +60,23 @@ body {
     transform: translate(-50%, -50%);
 }
 
-main{
-    flex: 1;
+.body_i header {
+    margin: 0;
+    padding: 0;
+}
+
+.body_i header h1, .body_i header p {
+    font-size: 34px;
+    font-weight: bold;
+    margin: 0;
+}
+
+html, body, main, section, header, footer {
+    margin: 0;
+    padding: 0;
+}
+
+.profile-section {
 }
 
 /* Google Noto Sans JPの文字サイズではなく太さを指定するコード。
@@ -101,11 +115,7 @@ main{
 
 /*---ここからはHTML本体の設定---*/
 /*サイズや位置関連*/
-h1 {
-    font-size: 18px;
-}
-
-h2 {
+h1, h2 {
     font-size: 34px;
 }
 
@@ -219,9 +229,9 @@ header .headline {
     margin: 0 20px;
 }
 
-footer {
+body:not(.rtm-license-body) footer {
     width: 100vw;
-    height: 5vh;
+    height: 48px;
     margin: 0;
     padding: 0;
     left: 0vh;
@@ -233,6 +243,11 @@ footer {
     position: absolute;
 }
 
+nav {
+    margin: 0;
+    display: block;
+}
+
 .footer-text {
     color: #fff;
 }
@@ -242,24 +257,88 @@ ul.footer-menu li {
     display: inline;
 }
 
+/* ul.footer-menu内の親からみてliタグかつ最後の要素"以外"の場合に擬似要素で「 |」を追加する */
+ul.footer-menu li:not(:last-child)::after {
+    content: " |";
+}
+
 ul.footer-menu,footer p {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-/*プロフィール紹介用の左右二段構えのやつ
-profile.htmlで使ってる*/
-main {
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    margin-right: 20px;
-    display: flex;
-    width: 1000px; /* 例としての幅の定義 */
+/* 装飾 */
+.font-size-h2 {
+    font-size: xx-large;
 }
 
-main .flex6_1 {
+.font-size-1 {
+    font-size: x-small;
+}
+
+.font-size-2 {
+    font-size: small;
+}
+
+.font-size-3 {
+    font-size: medium;
+}
+
+.font-size-4 {
+    font-size: large;
+}
+
+.font-size-5 {
+    font-size: x-large;
+}
+
+.font-size-6 {
+    font-size: xx-large;
+}
+
+.font-size-7 {
+    font-size: 48px;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.font-size-12px {
+    font-size: 12px;
+}
+
+.color-red {
+    color: red;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+/*プロフィール紹介用の左右二段構えのやつ
+profile.htmlで使ってる*/
+
+.profile-sections {
+    margin: 20px;
+    width: calc(100vw - 20px * 2); /* 例としての幅の定義 */
+}
+
+.profile-section {
+    width: 100%;
+    display: flex;
+}
+
+.profile-section:not(:first-child) {
+    margin-top: 20px;
+}
+
+.profile-section .flex6_1 {
     margin: 1px;
     padding: 10px;
     flex: 6;
@@ -268,13 +347,116 @@ main .flex6_1 {
     text-decoration: none;
 }
 
-main .flex6_2 {
+.profile-section .flex6_2 {
     margin: 1px;
     padding: 10px;
     flex: 6;
     color: #000000;
     background-color: #d4d4d4;
     text-decoration: none;
+}
+
+.profile-section .gadget-list h3 {
+    font-size: medium;
+    font-weight: normal;
+    margin: 1em 0 0 0; /* top right bottom left */
+}
+
+.profile-section .gadget-list h3::before {
+    content: '　';
+}
+
+.profile-section .gadget-list a {
+    display: block;
+}
+.profile-section .change-histories {
+    font-size: large;
+}
+
+.profile-section .change-histories h4 {
+    margin: 0;
+    font-size: large;
+    font-weight: normal;
+}
+
+main.profile .for-index-link {
+    /* フッター分 */
+    padding-bottom: 2em;
+    margin-bottom: calc(5vh + 20px);
+}
+
+main.profile .for-index-link a {
+    font-size: large;
+}
+
+/* RTM_LICENSE.htmlで使用 */
+.rtm-license-body {
+    width: 100%;
+    padding: 12px 48px;/* vertical / horizontal */
+    box-sizing: border-box;
+    word-break: break-all;
+}
+
+.rtm-license-body main, .rtm-license-body section, .rtm-license-body header {
+    text-align: left;
+}
+
+.rtm-license-body main, .rtm-license-body header {
+    width: 100%;
+    padding: 0;
+}
+
+.rtm-license-body ul.type-number {
+    list-style-type: decimal;
+}
+
+.rtm-license-body ul.type-small-alphabed {
+    list-style-type: lower-alpha;
+}
+
+.licenses, .licenses ul {
+    margin: 0;
+    padding: 0;
+}
+
+.licenses li {
+    position: relative;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.licenses > li {
+    padding-left: 48px;
+}
+
+.licenses > li > ul > li {
+    padding-left: 64px;
+}
+
+.licenses li .license-number {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    line-height: 1.5em;
+    position: absolute;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.licenses li .embed-license-number::before,
+.licenses li .embed-license-number::after {
+    content: '"';
+    font-weight: normal;
+}
+
+.licenses li .embed-license-number {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.rtm-license-body footer {
+    text-align: left;
 }
 
 /*!!色関連!!*/
@@ -310,7 +492,7 @@ a:hover {
         text-decoration: none;
     }
 
-    main .flex6_1 {
+    .profile-section .flex6_1 {
         margin: 1px;
         padding: 10px;
         flex: 6;
@@ -319,7 +501,7 @@ a:hover {
         text-decoration: none;
     }
 
-    main .flex6_2 {
+    .profile-section .flex6_2 {
         margin: 1px;
         padding: 10px;
         flex: 6;
@@ -346,7 +528,7 @@ a:hover {
     html {
         Width: 100%;
     }
-    main {
+    .profile-section {
         margin-top: 20px;
         margin-left: 20px;
         margin-bottom: 20px;
@@ -361,7 +543,7 @@ a:hover {
     header {
         Width: 90%;
     }
-    main {
+    .profile-section {
         margin-top: 20px;
         margin-left: 20px;
         margin-bottom: 20px;
