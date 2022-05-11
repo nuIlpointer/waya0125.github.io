@@ -1,0 +1,8 @@
+/[Dd]ownload/
+/[Dd]ownloads/
+
+*.exe
+*.7z
+*.zip
+.htpasswd
+.htaccess

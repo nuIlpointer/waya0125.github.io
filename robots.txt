@@ -20,3 +20,4 @@ Disallow: /VRChat_SS/
 Disallow: /Web_Archives/
 Disallow: /program_practice/
 Sitemap: https://waya0125.github.io/settings/sitemap.xml
+Sitemap: https://waya0125.com/settings/sitemap.xml
